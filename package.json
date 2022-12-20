@@ -1,0 +1,45 @@
+{
+  "name": "@balmli/homey-moment",
+  "version": "1.0.0",
+  "description": "MomentJS for Homey apps",
+  "main": "dist/index.js",
+  "types": "dist/moment.d.ts",
+  "type": "commonjs",
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "scripts": {
+    "prebuild": "del dist/",
+    "build": "tsc",
+    "postbuild": "cpy 'lib/*.js' 'lib/*.d.ts'  dist",
+    "watch": "tsc -w",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "node",
+    "moment",
+    "momentjs"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/balmli/node-homey-moment.git"
+  },
+  "author": "bjornar.almli@gmail.com",
+  "bugs": {
+    "url": "https://github.com/balmli/node-homey-moment/issues"
+  },
+  "homepage": "https://github.com/balmli/node-homey-moment#readme",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/chai": "^4.3.0",
+    "@types/mocha": "^9.1.1",
+    "@types/node": "^16.11.12",
+    "chai": "^4.3.6",
+    "cpy-cli": "^4.2.0",
+    "del-cli": "^3.0.0",
+    "mocha": "^10.0.0",
+    "ts-mocha": "^10.0.0",
+    "ts-node": "^10.7.0",
+    "typescript": "^4.6.4"
+  }
+}
